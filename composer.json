@@ -1,0 +1,45 @@
+{
+  "name": "bayfrontmedia/php-http-response",
+  "description": "Easily send HTTP responses.",
+  "homepage": "https://github.com/bayfrontmedia/php-http-response",
+  "license" : "MIT",
+  "version": "1.0.0",
+  "type": "library",
+  "keywords": [
+    "php",
+    "http",
+    "delete",
+    "get",
+    "head",
+    "patch",
+    "post",
+    "put",
+    "server",
+    "header",
+    "method",
+    "response",
+    "url"
+  ],
+  "authors": [
+    {
+      "name": "John Robinson",
+      "email": "john@bayfrontmedia.com",
+      "homepage": "https://www.bayfrontmedia.com",
+      "role": "Developer"
+    }
+  ],
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/bayfrontmedia"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bayfront\\HttpResponse\\": "src/"
+    }
+  }
+}
