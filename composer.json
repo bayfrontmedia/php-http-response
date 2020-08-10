@@ -8,16 +8,10 @@
   "keywords": [
     "php",
     "http",
-    "delete",
-    "get",
-    "head",
-    "patch",
-    "post",
-    "put",
-    "server",
     "header",
     "method",
     "response",
+    "redirect",
     "url"
   ],
   "authors": [
