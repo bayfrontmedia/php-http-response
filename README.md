@@ -19,6 +19,7 @@ John Robinson, [Bayfront Media](https://www.bayfrontmedia.com)
 ## Requirements
 
 - PHP >= 7.1.0
+- JSON PHP extension
 
 ## Installation
 
@@ -28,6 +29,7 @@ composer require bayfrontmedia/php-http-response
 
 ## Usage
 
+- [reset](#reset)
 - [setStatusCode](#setstatuscode)
 - [getStatusCode](#getstatuscode)
 - [setHeaders](#setheaders)
@@ -37,6 +39,28 @@ composer require bayfrontmedia/php-http-response
 - [send](#send)
 - [sendJson](#sendjson)
 - [redirect](#redirect)
+
+<hr />
+
+### reset
+
+**Description:**
+
+Resets all headers (including status code) and body.
+
+**Parameters:**
+
+- None
+
+**Returns:**
+
+- (self)
+
+**Example:**
+
+```
+$response->reset();
+```
 
 <hr />
 

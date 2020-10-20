@@ -13,17 +13,19 @@ class Response
 {
 
     /**
-     * Resets response back to default
+     * Resets all headers (including status code) and body.
      *
-     * @return void
+     * @return self
      */
 
-    private function _resetResponse(): void
+    public function reset(): self
     {
 
         $this->status_code = 200;
         $this->headers = [];
         $this->body = NULL;
+
+        return $this;
 
     }
 
@@ -278,7 +280,7 @@ class Response
 
         // -------------------- Reset --------------------
 
-        $this->_resetResponse();
+        $this->reset();
 
         exit; // Ensure nothing else loads, just to be safe
 
@@ -332,7 +334,7 @@ class Response
             throw new InvalidStatusCodeException('Unable to redirect: invalid status code');
         }
 
-        $this->_resetResponse(); // Reset anything that may be set
+        $this->reset(); // Reset anything that may be set
 
         $this->setHeaders([
             'Location' => $url

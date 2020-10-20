@@ -3,7 +3,7 @@
   "description": "Easily send HTTP responses.",
   "homepage": "https://github.com/bayfrontmedia/php-http-response",
   "license" : "MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "library",
   "keywords": [
     "php",
@@ -29,7 +29,8 @@
     }
   ],
   "require": {
-    "php": ">=7.1.0"
+    "php": ">=7.1.0",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {
