@@ -258,7 +258,15 @@ class Response
 
         // -------------------- Status code --------------------
 
-        $protocol = $_SERVER['SERVER_PROTOCOL'];
+        if (isset($_SERVER['SERVER_PROTOCOL'])) {
+
+            $protocol = $_SERVER['SERVER_PROTOCOL'];
+
+        } else {
+
+            $protocol = 'HTTP/1.1';
+
+        }
 
         $status = $this->getStatusCode();
 
