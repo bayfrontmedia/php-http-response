@@ -174,7 +174,7 @@ class Response
     private $remove_headers = [];
 
     /**
-     * Sets header value(s) to be removed with the response.
+     * Sets header values to be removed with the response.
      *
      * @param array $headers
      *
@@ -197,7 +197,7 @@ class Response
     private $headers = [];
 
     /**
-     * Sets header value(s) to be sent with the response.
+     * Sets header values to be sent with the response.
      *
      * @param $headers array
      *

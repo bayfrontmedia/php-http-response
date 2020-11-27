@@ -128,7 +128,7 @@ print_r($response->getStatusCode());
 
 **Description:**
 
-Sets header value(s) to be removed with the response.
+Sets header values to be removed with the response.
 
 **Parameters:**
 
@@ -152,7 +152,7 @@ $response->removeHeaders([
 
 **Description:**
 
-Sets header value(s) to be sent with the response.
+Sets header values to be sent with the response.
 
 **Parameters:**
 
