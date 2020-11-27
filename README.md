@@ -32,6 +32,7 @@ composer require bayfrontmedia/php-http-response
 - [reset](#reset)
 - [setStatusCode](#setstatuscode)
 - [getStatusCode](#getstatuscode)
+- [removeHeaders](#removeheaders)
 - [setHeaders](#setheaders)
 - [getHeaders](#getheaders)
 - [setBody](#setbody)
@@ -119,6 +120,30 @@ Returns the status code and associated phrase to be sent with response.
 
 ```
 print_r($response->getStatusCode());
+```
+
+<hr />
+
+### removeHeaders
+
+**Description:**
+
+Sets header value(s) to be removed with the response.
+
+**Parameters:**
+
+- `$headers` (array)
+
+**Returns:**
+
+- (self)
+
+**Example:**
+
+```
+$response->removeHeaders([
+    'X-Powered-By'
+]);
 ```
 
 <hr />

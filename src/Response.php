@@ -112,7 +112,7 @@ class Response
     ];
 
     /**
-     * Checks if a given status code is valid
+     * Checks if a given status code is valid.
      *
      * @param $status int
      *
@@ -125,7 +125,7 @@ class Response
     }
 
     /**
-     * Sets status code to be sent with response
+     * Sets status code to be sent with response.
      *
      * @param int $code
      *
@@ -150,7 +150,7 @@ class Response
     }
 
     /**
-     * Returns the status code and associated phrase to be sent with response
+     * Returns the status code and associated phrase to be sent with response.
      *
      * @return array
      */
@@ -171,10 +171,33 @@ class Response
      * ############################################################
      */
 
+    private $remove_headers = [];
+
+    /**
+     * Sets header value(s) to be removed with the response.
+     *
+     * @param array $headers
+     *
+     * @return self
+     */
+
+    public function removeHeaders(array $headers): self
+    {
+
+        foreach ($headers as $header => $value) {
+
+            $this->remove_headers[$header] = $value;
+
+        }
+
+        return $this;
+
+    }
+
     private $headers = [];
 
     /**
-     * Sets header value(s) to be sent with the response
+     * Sets header value(s) to be sent with the response.
      *
      * @param $headers array
      *
@@ -195,7 +218,7 @@ class Response
     }
 
     /**
-     * Returns array of headers to be sent with the response
+     * Returns array of headers to be sent with the response.
      *
      * @return array
      */
@@ -214,7 +237,7 @@ class Response
     private $body;
 
     /**
-     * Sets body to be sent with the response
+     * Sets body to be sent with the response.
      *
      * @param $body string
      *
@@ -231,7 +254,7 @@ class Response
     }
 
     /**
-     * Returns body to be sent with the response, or null if body has not been set
+     * Returns body to be sent with the response, or null if body has not been set.
      *
      * @return string|null
      */
@@ -248,7 +271,7 @@ class Response
      */
 
     /**
-     * Sends response
+     * Sends response.
      *
      * @return void
      */
@@ -274,6 +297,16 @@ class Response
 
         // -------------------- Headers --------------------
 
+        // Remove
+
+        foreach ($this->remove_headers as $remove) {
+
+            header_remove($remove);
+
+        }
+
+        // Set
+
         foreach ($this->getHeaders() as $k => $v) {
 
             header($k . ': ' . $v);
@@ -295,7 +328,7 @@ class Response
     }
 
     /**
-     * Sets Content-Type as application/vnd.api+json, and converts the given array to the JSON encoded body
+     * Sets Content-Type as application/vnd.api+json, and converts the given array to the JSON encoded body.
      *
      * @param $array array
      *
@@ -312,7 +345,7 @@ class Response
     }
 
     /**
-     * Is given status code valid a valid redirect
+     * Is given status code valid a valid redirect.
      *
      * @param $status int
      *
@@ -325,7 +358,7 @@ class Response
     }
 
     /**
-     * Redirects to a given URL using a given status code
+     * Redirects to a given URL using a given status code.
      *
      * @param string $url
      * @param int $status (HTTP status code to return)
