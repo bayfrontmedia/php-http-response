@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities
 
+## [1.2.1] - 2021.02.28
+
+### Fixed
+
+- Fixed bug in `send` method where unnecessary `exit()` was causing destructors not to be called.
+
 ## [1.2.0] - 2020.11.27
 
 ### Added

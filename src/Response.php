@@ -323,8 +323,6 @@ class Response
 
         $this->reset();
 
-        exit; // Ensure nothing else loads, just to be safe
-
     }
 
     /**
