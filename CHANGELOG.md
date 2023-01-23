@@ -12,6 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities
 
+## [1.4.0] - 2022.01.23
+
+### Changed
+
+- Updated `sendJson` method to return `Content-Type` of `application/json`
+- Miscellaneous code cleanup
+
 ## [1.3.0] - 2021.04.21
 
 ### Added

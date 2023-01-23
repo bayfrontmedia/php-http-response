@@ -268,7 +268,7 @@ $response->send();
 
 **Description:**
 
-Sets Content-Type as `application/vnd.api+json`, and converts the given array to the JSON encoded body.
+Sets Content-Type as `application/json`, and converts the given array to the JSON encoded body.
 
 **Parameters:**
 

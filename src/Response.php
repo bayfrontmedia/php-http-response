@@ -1,12 +1,5 @@
 <?php
 
-/**
- * @package php-http-response
- * @link https://github.com/bayfrontmedia/php-http-response
- * @author John Robinson <john@bayfrontmedia.com>
- * @copyright 2020 Bayfront Media
- */
-
 namespace Bayfront\HttpResponse;
 
 class Response
@@ -311,19 +304,11 @@ class Response
 
         // -------------------- Status code --------------------
 
-        if (isset($_SERVER['SERVER_PROTOCOL'])) {
-
-            $protocol = $_SERVER['SERVER_PROTOCOL'];
-
-        } else {
-
-            $protocol = 'HTTP/1.1';
-
-        }
+        $protocol = $_SERVER['SERVER_PROTOCOL'] ?? 'HTTP/1.1';
 
         $status = $this->getStatusCode();
 
-        header(trim($protocol . ' ' . $status['code'] . ' ' . $status['phrase']), true);
+        header(trim($protocol . ' ' . $status['code'] . ' ' . $status['phrase']));
 
         // -------------------- Headers --------------------
 
@@ -356,7 +341,7 @@ class Response
     }
 
     /**
-     * Sets Content-Type as application/vnd.api+json, and converts the given array to the JSON encoded body.
+     * Sets Content-Type as application/json, and converts the given array to the JSON encoded body.
      *
      * @param $array array
      *
@@ -367,7 +352,7 @@ class Response
     {
 
         $this->setHeaders([
-            'Content-Type' => 'application/vnd.api+json'
+            'Content-Type' => 'application/json'
         ])->setBody(json_encode($array))->send();
 
     }
