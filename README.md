@@ -21,7 +21,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Requirements
 
-- PHP `^7.2.0`
+- PHP `^8.0`
 - JSON PHP extension
 
 ## Installation

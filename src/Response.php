@@ -28,7 +28,7 @@ class Response
      * ############################################################
      */
 
-    private $status_code = 200;
+    private int $status_code = 200;
 
     /*
      * See: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
@@ -40,7 +40,7 @@ class Response
      * 5xx: Server Error - The server failed to fulfill an apparently valid request
      */
 
-    private $valid_status_codes = [
+    private array $valid_status_codes = [
         100 => 'Continue',
         101 => 'Switching Protocols',
         102 => 'Processing',
@@ -194,7 +194,7 @@ class Response
      * ############################################################
      */
 
-    private $remove_headers = [];
+    private array $remove_headers = [];
 
     /**
      * Sets header values to be removed with the response.
@@ -217,7 +217,7 @@ class Response
 
     }
 
-    private $headers = [];
+    private array $headers = [];
 
     /**
      * Sets header values to be sent with the response.
@@ -257,7 +257,7 @@ class Response
      * ############################################################
      */
 
-    private $body;
+    private ?string $body;
 
     /**
      * Sets body to be sent with the response.
