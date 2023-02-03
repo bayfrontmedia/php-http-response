@@ -16,7 +16,7 @@ class Response
 
         $this->status_code = 200;
         $this->headers = [];
-        $this->body = NULL;
+        $this->body = '';
 
         return $this;
 
