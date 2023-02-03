@@ -257,7 +257,7 @@ class Response
      * ############################################################
      */
 
-    private ?string $body;
+    private string $body = '';
 
     /**
      * Sets body to be sent with the response.
@@ -279,10 +279,10 @@ class Response
     /**
      * Returns body to be sent with the response, or null if body has not been set.
      *
-     * @return string|null
+     * @return string
      */
 
-    public function getBody(): ?string
+    public function getBody(): string
     {
         return $this->body;
     }
@@ -330,7 +330,7 @@ class Response
 
         // -------------------- Body --------------------
 
-        if (NULL !== $this->getBody()) {
+        if ($this->getBody() != '') {
             echo $this->getBody();
         }
 

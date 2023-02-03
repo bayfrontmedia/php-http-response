@@ -224,7 +224,7 @@ $response->setBody('This is the response body.');
 
 **Description:**
 
-Returns body to be sent with the response, or `null` if body has not been set.
+Returns body to be sent with the response.
 
 **Parameters:**
 
@@ -232,7 +232,7 @@ Returns body to be sent with the response, or `null` if body has not been set.
 
 **Returns:**
 
-- (string|null)
+- (string)
 
 **Example:**
 
