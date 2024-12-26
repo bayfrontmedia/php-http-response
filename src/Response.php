@@ -334,10 +334,6 @@ class Response
             echo $this->getBody();
         }
 
-        // -------------------- Reset --------------------
-
-        $this->reset();
-
     }
 
     /**

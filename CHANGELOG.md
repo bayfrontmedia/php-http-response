@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Fixed` for any bug fixes.
 - `Security` in case of vulnerabilities
 
+## [2.0.3] - 2024.12.26
+
+### Fixed
+
+- Fixed bug in `send` method resetting response
+
 ## [2.0.2] - 2024.12.23
 
 ### Added
